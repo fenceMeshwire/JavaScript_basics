@@ -1,7 +1,7 @@
 // Converter from Fahrenheit to Celsius
 const values_fahrenheit = [65, 80, 92, 70, 63, 72];
 const values_celsius = [];
-for (const element of fahrenheit) {
+for (const element of values_fahrenheit) {
   let value_celsius = (element - 32) * (5/9);
   values_celsius.push(value_celsius);
 }
