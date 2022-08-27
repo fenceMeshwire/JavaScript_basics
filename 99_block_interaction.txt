@@ -1,0 +1,33 @@
+// Blocking the user interaction via right-click and the HTML document in the browser
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// The key method is preventDefault()
+
+// This method is useless though, since the user is able to press the F12 key on the keyboard
+// in order to open the DevTools available in every browser.
+
+// Another solution is to apply a simple Python script in order to gather the code from such a website:
+
+-- Python script --
+#!/usr/bin/env python3
+
+# Python 3.9.5
+
+# write_html_code.py
+
+# Dependencies
+import os
+import requests
+
+path = '/home/user/...'  # Enter path for document storage here
+os.chdir(path)           # Change current working directory for write operation later
+
+url = 'https://www.domain.com'
+
+response = requests.get(url)
+html = response.text
+
+with open('source_code.txt', 'wt') as outfile:
+  outfile.write(html)
+outfile.close()
