@@ -28,7 +28,7 @@ url = 'https://www.domain.com'      # Enter domain here
 response = requests.get(url)        # Response should be 200 (OK)
 html = response.text                # Complete source code as string
 
-# Write the whole document to a txt-file:
+# Write the whole document to a TXT-file:
 with open('source_code.txt', 'wt') as outfile:
   outfile.write(html)
 outfile.close()
