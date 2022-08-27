@@ -7,7 +7,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 // This method is useless though, since the user is able to press the F12 key on the keyboard
 // in order to open the DevTools available in every browser.
 
-// Another solution is to apply a simple Python script in order to gather the code from such a website:
+// Another solution is to apply a simple Python script to gather the code from such a website:
 
 -- Python script --
 #!/usr/bin/env python3
@@ -20,14 +20,15 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 import os
 import requests
 
-path = '/home/user/...'  # Enter path for document storage here
-os.chdir(path)           # Change current working directory for write operation later
+path = '/home/user/...'             # Enter path for document storage here
+os.chdir(path)                      # Change current working directory for write operation later
 
-url = 'https://www.domain.com'
+url = 'https://www.domain.com'      # Enter domain here
 
-response = requests.get(url)
-html = response.text
+response = requests.get(url)        # Response should be 200 (OK)
+html = response.text                # Complete source code as string
 
+# Write the whole document to a txt-file:
 with open('source_code.txt', 'wt') as outfile:
   outfile.write(html)
 outfile.close()
