@@ -4,5 +4,5 @@ const prices_in_range = prices.filter(function(price) {
     return price < 10;
 });
 
-document.write("Filtering prices for prices in range:", prices)
-document.write("Prices in range:", prices_in_range)
+document.write("Filtering prices for prices in range:", prices, "<br>")
+document.write("Prices in range:", prices_in_range, "<br>")
