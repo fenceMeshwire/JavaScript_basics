@@ -13,7 +13,7 @@ do
 {
     if (counter < int_random_number) {
         counter++;
-        if (counter%5 === 0) {
+        if (counter%5 === 0 && counter < int_random_number) {
             document.write(counter, ", ");
         }
     } 
