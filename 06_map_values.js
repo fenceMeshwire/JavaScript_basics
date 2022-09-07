@@ -1,6 +1,6 @@
 // 06_map_values.js
 
-const data = [39, 10, 26, 7, 13, 19, 25, 8, 14, 29, 31, 3];
+const data = Array.from({length: 20}, () => Math.floor(Math.random() * 30));
 const smaller_ten = data.map(function(value) {
   return value < 10; 
 })
