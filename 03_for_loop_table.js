@@ -1,4 +1,4 @@
-// 02_for_loop_table.js
+// 03_for_loop_table.js
 
 // Create a table with 4 rows and 6 columns.
 // Previously set the attribute in the HTML document: 
