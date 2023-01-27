@@ -23,30 +23,30 @@
 	<div id="result"></div>
 	
 	<script>
-		function displayRadioValue() {
-			var element = document.getElementsByName('option');
+	function displayRadioValue() {
+		
+	var element = document.getElementsByName('option');
+      	var option1 = "Option_1" + "<br>" + "Perform task 1"
+      	var option2 = "Option_2" + "<br>" + "Perform task 2"
+      	var option3 = "Option_3" + "<br>" + "Perform task 3"
       
-			var option1 = "Option_1" + "<br>" + "Perform task 1"
-      var option2 = "Option_2" + "<br>" + "Perform task 2"
-      var option3 = "Option_3" + "<br>" + "Perform task 3"
-      
-			for(i = 0; i < element.length; i++) {
-                    for(i = 0; i < element.length; i++) {
-                        if(element[i].checked) {
-                            switch (element[i].value) {
-                                case "option1":
-                                    document.getElementById("result").innerHTML = option1;
-                                    break;
-                                case "option2": 
-                                    document.getElementById("result").innerHTML = option2;
-                                    break;
-                                case "option3": 
-                                    document.getElementById("result").innerHTML = option3;
+	for(i = 0; i < element.length; i++) {
+	    for(i = 0; i < element.length; i++) {
+		if(element[i].checked) {
+		    switch (element[i].value) {
+			case "option1":
+			    document.getElementById("result").innerHTML = option1;
+			    break;
+			case "option2": 
+			    document.getElementById("result").innerHTML = option2;
+			    break;
+			case "option3": 
+			    document.getElementById("result").innerHTML = option3;
                             }
                         }
                     }
                 }
-		    }
+	    }
 	</script>
 </body>
 </html>					
