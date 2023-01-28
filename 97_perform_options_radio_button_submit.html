@@ -1,52 +1,43 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-	<title>Perform option upon selected radio button</title>
-</head>
-
-<body>
-	<p>Select a radio button and click on Submit.</p>
-	
+  <head>
+    <title>Perform option upon selected radio button</title>
+  </head>
+    <body>
+      <p>Select a radio button and click on Submit.</p>
 	<p>Options:</p>
-	<input type="radio" name="option" value="option1">
-	<input type="radio" name="option" value="option2">
-	<input type="radio" name="option" value="option3">
-	
-	<br>
-	
-	<button type="button" onclick="displayRadioValue()">Submit</button>
-	
-	<br>
-	
-	<div id="result"></div>
-	
-	<script>
-	function displayRadioValue() {
+       	  <input type="radio" name="option" value="option1">
+	  <input type="radio" name="option" value="option2">
+	  <input type="radio" name="option" value="option3">
+	  <br>
+	  <button type="button" onclick="displayRadioValue()">Submit</button>
+	  <br>
+	  <div id="result"></div>	
+	  <script>
+	    function displayRadioValue() {
 		
-	var element = document.getElementsByName('option');
-      	var option1 = "Option_1" + "<br>" + "Perform task 1"
-      	var option2 = "Option_2" + "<br>" + "Perform task 2"
-      	var option3 = "Option_3" + "<br>" + "Perform task 3"
+	    var element = document.getElementsByName('option');
+      	    var option1 = "Option_1" + "<br>" + "Perform task 1"
+      	    var option2 = "Option_2" + "<br>" + "Perform task 2"
+      	    var option3 = "Option_3" + "<br>" + "Perform task 3"
       
-	for(i = 0; i < element.length; i++) {
 	    for(i = 0; i < element.length; i++) {
+	      for(i = 0; i < element.length; i++) {
 		if(element[i].checked) {
-		    switch (element[i].value) {
-			case "option1":
-			    document.getElementById("result").innerHTML = option1;
-			    break;
-			case "option2": 
-			    document.getElementById("result").innerHTML = option2;
-			    break;
-			case "option3": 
-			    document.getElementById("result").innerHTML = option3;
-                            }
-                        }
-                    }
+       	          switch (element[i].value) {
+	       	    case "option1":
+		      document.getElementById("result").innerHTML = option1;
+	  	      break;
+		  case "option2": 
+		    document.getElementById("result").innerHTML = option2;
+		    break;
+		  case "option3": 
+		    document.getElementById("result").innerHTML = option3;
+                  }
                 }
-	    }
+              }
+            }
+	  }
 	</script>
-</body>
+  </body>
 </html>					
